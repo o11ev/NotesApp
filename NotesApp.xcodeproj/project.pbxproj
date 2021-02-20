@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04424BDD25E1B8A2001FFF8B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04424BDF25E1B8A2001FFF8B /* Launch Screen.storyboard */; };
 		048D104125E17B3700478F13 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D104025E17B3700478F13 /* NewNoteViewController.swift */; };
 		048D104D25E188DD00478F13 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D104C25E188DD00478F13 /* NotesListViewController.swift */; };
 		048D105025E1890800478F13 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D104F25E1890800478F13 /* NoteViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04424BDE25E1B8A2001FFF8B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		044CD44425E1AEC400565830 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044CD44525E1AEC400565830 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = NotesApp/en.lproj/NotesList.storyboard; sourceTree = "<group>"; };
 		044CD44625E1AEC400565830 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = NotesApp/en.lproj/NewNote.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		048D106025E190EA00478F13 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				04424BDF25E1B8A2001FFF8B /* Launch Screen.storyboard */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				048D107225E192EB00478F13 /* NotesList.storyboard in Resources */,
 				048D106525E1913E00478F13 /* NewNote.storyboard in Resources */,
 				04DBDC2425E124A20042E076 /* Assets.xcassets in Resources */,
+				04424BDD25E1B8A2001FFF8B /* Launch Screen.storyboard in Resources */,
 				04DBDC2225E124A10042E076 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +229,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		04424BDF25E1B8A2001FFF8B /* Launch Screen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04424BDE25E1B8A2001FFF8B /* en */,
+			);
+			name = "Launch Screen.storyboard";
+			sourceTree = "<group>";
+		};
 		048D106325E1913E00478F13 /* NewNote.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -374,6 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -392,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NotesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
