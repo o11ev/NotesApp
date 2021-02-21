@@ -69,10 +69,43 @@
                     <view key="view" contentMode="scaleToFill" id="bn1-Aq-m4Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-J8-tqx">
+                                <rect key="frame" x="16" y="104" width="382" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="u3Z-IA-o6H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zxb-xL-wL3">
+                                <rect key="frame" x="16" y="180" width="382" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9o9-xl-DwV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9o9-xl-DwV" firstAttribute="trailing" secondItem="TT1-J8-tqx" secondAttribute="trailing" constant="16" id="3uQ-Qo-gYw"/>
+                            <constraint firstItem="9o9-xl-DwV" firstAttribute="trailing" secondItem="zxb-xL-wL3" secondAttribute="trailing" constant="16" id="EBo-aP-nat"/>
+                            <constraint firstItem="TT1-J8-tqx" firstAttribute="leading" secondItem="9o9-xl-DwV" secondAttribute="leading" constant="16" id="K0Y-lX-CGk"/>
+                            <constraint firstItem="9o9-xl-DwV" firstAttribute="bottom" secondItem="zxb-xL-wL3" secondAttribute="bottom" constant="16" id="USv-ZN-gxA"/>
+                            <constraint firstItem="zxb-xL-wL3" firstAttribute="leading" secondItem="9o9-xl-DwV" secondAttribute="leading" constant="16" id="Z4V-Cl-4Ac"/>
+                            <constraint firstItem="zxb-xL-wL3" firstAttribute="top" secondItem="TT1-J8-tqx" secondAttribute="bottom" constant="16" id="ZZk-As-lBA"/>
+                            <constraint firstItem="TT1-J8-tqx" firstAttribute="top" secondItem="9o9-xl-DwV" secondAttribute="top" constant="16" id="kH2-pm-Lq0"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Note" id="4Om-mD-mAe"/>
+                    <navigationItem key="navigationItem" title="Note" largeTitleDisplayMode="never" id="4Om-mD-mAe">
+                        <barButtonItem key="backBarButtonItem" id="SG1-rS-q1o"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="noteTextView" destination="zxb-xL-wL3" id="O21-9B-Fgp"/>
+                        <outlet property="titleTextFiled" destination="TT1-J8-tqx" id="oJr-Bz-O6j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sE1-4d-BvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,6 +113,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
