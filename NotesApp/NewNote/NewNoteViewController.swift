@@ -8,22 +8,75 @@
 import UIKit
 
 class NewNoteViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet var titleTextFiled: UITextField!
+    @IBOutlet var noteTextView: UITextView!
+    
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        createNote()
+        dismiss(animated: true)
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        noteTextView.text = "Start texting"
+        noteTextView.textColor = UIColor.lightGray
+        noteTextView.delegate = self
+        
+        titleTextFiled.becomeFirstResponder()
+        
+    }
+}
 
+// MARK: - Adding Note
+extension NewNoteViewController {
+    // Сохранение заметки
+    func createNote() {
+        guard let title = titleTextFiled.text else { return }
+        guard let text = noteTextView.text else { return }
+        
+        // Если заголовок и текст не пустые, то создаем новую заметку и сохраняем
+        if !title.isEmpty && !text.isEmpty {
+            let note = Note(title: title, text: text)
+            DataManager.shared.notes.append(note)
+            
+        } else {
+            showAlert(with: "Something went wrong",
+                      and: "Please check text of notes")
+        }
+        
+    }
+}
+
+// MARK: - Alert Controller
+extension NewNoteViewController {
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        present(alert, animated: true)
+    }
+}
+
+// MARK: - Text View Placeholder Behaviour
+extension NewNoteViewController: UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Start texting"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    
 }
