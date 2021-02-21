@@ -9,10 +9,16 @@ import UIKit
 
 class NoteViewController: UIViewController {
 
+    var note: Note!
+    
+    @IBOutlet var titleTextFiled: UITextField!
+    @IBOutlet var noteTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        titleTextFiled.text = note.title
+        noteTextView.text = note.text
     }
     
 
