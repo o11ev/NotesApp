@@ -11,3 +11,9 @@ struct Note {
     let title: String
     let text: String
 }
+
+extension Note {
+    static func getNotes() -> [Note] {
+        DataManager.shared.notes
+    }
+}
