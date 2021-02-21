@@ -35,7 +35,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes List" id="hVY-Zi-BTK">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="1th-Qq-Qnb"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="1th-Qq-Qnb">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="rvO-mZ-FVo" id="RdZ-i7-3vb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVd-ws-ili" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
