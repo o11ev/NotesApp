@@ -23,8 +23,11 @@ class NewNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        noteTextView.text = "Start text"
+        noteTextView.text = "Start texting"
         noteTextView.textColor = UIColor.lightGray
+        
+        noteTextView.delegate = self
+        
         titleTextFiled.becomeFirstResponder()
         
     }
@@ -59,4 +62,23 @@ extension NewNoteViewController {
                                       preferredStyle: .alert)
         present(alert, animated: true)
     }
+}
+
+// MARK: - Text View Placeholder Behaviour
+extension NewNoteViewController: UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Start texting"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    
 }
