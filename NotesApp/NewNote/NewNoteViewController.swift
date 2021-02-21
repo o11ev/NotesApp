@@ -25,7 +25,6 @@ class NewNoteViewController: UIViewController {
         super.viewDidLoad()
         noteTextView.text = "Start texting"
         noteTextView.textColor = UIColor.lightGray
-        
         noteTextView.delegate = self
         
         titleTextFiled.becomeFirstResponder()
@@ -44,7 +43,6 @@ extension NewNoteViewController {
         if !title.isEmpty && !text.isEmpty {
             let note = Note(title: title, text: text)
             DataManager.shared.notes.append(note)
-            DataManager.printNotes()
             
         } else {
             showAlert(with: "Something went wrong",
