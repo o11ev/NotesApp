@@ -13,6 +13,8 @@ class NotesListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 60
+        
     }
 
     // MARK: - Table view data source
@@ -26,6 +28,7 @@ class NotesListViewController: UITableViewController {
         let note = notes[indexPath.row]
         
         content.text = note.title
+        content.secondaryText = note.text
         cell.contentConfiguration = content
 
         return cell

@@ -23,10 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04424BDE25E1B8A2001FFF8B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
-		044CD44425E1AEC400565830 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		044CD44525E1AEC400565830 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = NotesApp/en.lproj/NotesList.storyboard; sourceTree = "<group>"; };
-		044CD44625E1AEC400565830 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = NotesApp/en.lproj/NewNote.storyboard; sourceTree = "<group>"; };
 		048D104025E17B3700478F13 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		048D104C25E188DD00478F13 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
 		048D104F25E1890800478F13 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +34,10 @@
 		04DBDC1E25E124A10042E076 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		04DBDC2325E124A20042E076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DBDC2825E124A20042E076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2953DC3E25E2B8D400B738AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2953DC3F25E2B8D400B738AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = NotesApp/Base.lproj/NewNote.storyboard; sourceTree = "<group>"; };
+		2953DC4025E2B8D400B738AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = NotesApp/Base.lproj/NotesList.storyboard; sourceTree = "<group>"; };
+		2953DC4125E2B8D400B738AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +184,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 04DBDC0E25E124A10042E076;
 			productRefGroup = 04DBDC1825E124A10042E076 /* Products */;
@@ -232,7 +233,7 @@
 		04424BDF25E1B8A2001FFF8B /* Launch Screen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				04424BDE25E1B8A2001FFF8B /* en */,
+				2953DC4125E2B8D400B738AB /* Base */,
 			);
 			name = "Launch Screen.storyboard";
 			sourceTree = "<group>";
@@ -240,7 +241,7 @@
 		048D106325E1913E00478F13 /* NewNote.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				044CD44625E1AEC400565830 /* en */,
+				2953DC3F25E2B8D400B738AB /* Base */,
 			);
 			name = NewNote.storyboard;
 			sourceTree = "<group>";
@@ -248,7 +249,7 @@
 		048D107025E192EB00478F13 /* NotesList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				044CD44525E1AEC400565830 /* en */,
+				2953DC4025E2B8D400B738AB /* Base */,
 			);
 			name = NotesList.storyboard;
 			sourceTree = "<group>";
@@ -256,7 +257,7 @@
 		04DBDC2025E124A10042E076 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				044CD44425E1AEC400565830 /* en */,
+				2953DC3E25E2B8D400B738AB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
