@@ -16,21 +16,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fs7-qa-iJS">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fs7-qa-iJS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="New Note" id="WDS-kL-S5O">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="COM-Df-ZQZ"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="tQW-61-GYh"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="COM-Df-ZQZ">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="EoR-TX-K3E" id="OaG-OX-ef8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="tQW-61-GYh">
+                                            <connections>
+                                                <action selector="saveButtonPressed:" destination="EoR-TX-K3E" id="Ali-3H-awv"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGh-44-tpf">
+                                <rect key="frame" x="16" y="60" width="382" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="v93-kY-aNp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0d-ya-Xf4">
+                                <rect key="frame" x="16" y="136" width="382" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2jj-U3-rrI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w0d-ya-Xf4" firstAttribute="leading" secondItem="2jj-U3-rrI" secondAttribute="leading" constant="16" id="5mx-Sk-XlH"/>
+                            <constraint firstAttribute="trailing" secondItem="fs7-qa-iJS" secondAttribute="trailing" id="9ay-aQ-HnK"/>
+                            <constraint firstItem="2jj-U3-rrI" firstAttribute="trailing" secondItem="w0d-ya-Xf4" secondAttribute="trailing" constant="16" id="JXk-F6-G4v"/>
+                            <constraint firstItem="fs7-qa-iJS" firstAttribute="leading" secondItem="dDv-JL-T0O" secondAttribute="leading" id="NJi-Mg-1Op"/>
+                            <constraint firstItem="w0d-ya-Xf4" firstAttribute="top" secondItem="eGh-44-tpf" secondAttribute="bottom" constant="16" id="SBM-u8-IEl"/>
+                            <constraint firstItem="2jj-U3-rrI" firstAttribute="trailing" secondItem="eGh-44-tpf" secondAttribute="trailing" constant="16" id="csb-dL-MP4"/>
+                            <constraint firstItem="eGh-44-tpf" firstAttribute="leading" secondItem="2jj-U3-rrI" secondAttribute="leading" constant="16" id="iSv-QK-6yN"/>
+                            <constraint firstItem="2jj-U3-rrI" firstAttribute="bottom" secondItem="w0d-ya-Xf4" secondAttribute="bottom" constant="16" id="qi0-8n-FqV"/>
+                            <constraint firstItem="eGh-44-tpf" firstAttribute="top" secondItem="fs7-qa-iJS" secondAttribute="bottom" constant="16" id="vpl-4v-8oB"/>
+                            <constraint firstItem="fs7-qa-iJS" firstAttribute="top" secondItem="dDv-JL-T0O" secondAttribute="top" id="wIW-nY-AZm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lwS-lD-z73"/>
+                    <connections>
+                        <outlet property="noteTextView" destination="w0d-ya-Xf4" id="4mB-VP-Wjp"/>
+                        <outlet property="titleTextFiled" destination="eGh-44-tpf" id="CrE-pY-8z1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVf-JJ-PtD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -38,6 +76,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
