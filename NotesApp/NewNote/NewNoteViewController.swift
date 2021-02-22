@@ -11,6 +11,17 @@ class NewNoteViewController: UIViewController {
     
     @IBOutlet var titleTextFiled: UITextField!
     @IBOutlet var noteTextView: UITextView!
+    @IBOutlet var currentDataLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setDateToLabel()
+        noteTextView.text = "Start texting"
+        noteTextView.textColor = UIColor.lightGray
+        noteTextView.delegate = self
+        
+        titleTextFiled.becomeFirstResponder()
+    }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
@@ -21,14 +32,9 @@ class NewNoteViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        noteTextView.text = "Start texting"
-        noteTextView.textColor = UIColor.lightGray
-        noteTextView.delegate = self
-        
-        titleTextFiled.becomeFirstResponder()
-        
+    private func setDateToLabel() {
+        let noteDate: String = addCurrentDateToNote()
+        currentDataLabel.text = noteDate
     }
 }
 
@@ -38,17 +44,17 @@ extension NewNoteViewController {
     func createNote() {
         guard let title = titleTextFiled.text else { return }
         guard let text = noteTextView.text else { return }
+        let date = addCurrentDateToNote()
         
         // Если заголовок и текст не пустые, то создаем новую заметку и сохраняем
         if !title.isEmpty && !text.isEmpty {
-            let note = Note(title: title, text: text)
+            let note = Note(title: title, text: text, date: date)
             DataManager.shared.notes.append(note)
             
         } else {
             showAlert(with: "Something went wrong",
                       and: "Please check text of notes")
         }
-        
     }
 }
 
@@ -77,6 +83,15 @@ extension NewNoteViewController: UITextViewDelegate {
             textView.textColor = UIColor.black
         }
     }
-    
-    
+}
+
+// MARK: - Add Current Day to Note Info
+extension NewNoteViewController {
+    func addCurrentDateToNote() -> String {
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "dd-MM-yyyy"
+        let formattedDate = format.string(from: date)
+        return formattedDate
+    }
 }

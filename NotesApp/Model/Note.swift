@@ -10,6 +10,7 @@ import Foundation
 struct Note {
     let title: String
     let text: String
+    let date: String
 }
 
 extension Note {
