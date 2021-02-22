@@ -91,7 +91,6 @@ extension NewNoteViewController {
         let date = Date()
         let format = DateFormatter()
         format.dateFormat = "dd-MM-yyyy"
-        let formattedDate = format.string(from: date)
-        return formattedDate
+        return format.string(from: date)
     }
 }

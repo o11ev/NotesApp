@@ -9,25 +9,24 @@ import UIKit
 
 class NoteViewController: UIViewController {
     
-    var note: Note!
-    var noteIndex: Int!
-    
     @IBOutlet var titleTextFiled: UITextField!
     @IBOutlet var noteTextView: UITextView!
     @IBOutlet var noteDataLabel: UILabel!
+    
+    var note: Note!
+    var noteIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleTextFiled.text = note.title
         noteTextView.text = note.text
-        
-        setOldDateToLabel()
+        noteDataLabel.text = note.date
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         editNote()
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -51,15 +50,6 @@ extension NoteViewController {
         let date = Date()
         let format = DateFormatter()
         format.dateFormat = "dd-MM-yyyy"
-        let formattedDate = format.string(from: date)
-        return formattedDate
-    }
-}
-
-// MARK: - Set Date to Label
-extension NoteViewController {
-    func setOldDateToLabel() {
-        let oldData = note.date
-        noteDataLabel.text = oldData
+        return format.string(from: date)
     }
 }

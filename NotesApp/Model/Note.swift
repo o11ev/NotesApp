@@ -8,13 +8,7 @@
 import Foundation
 
 struct Note {
-    let title: String
-    let text: String
-    let date: String
-}
-
-extension Note {
-    static func getNotes() -> [Note] {
-        DataManager.shared.notes
-    }
+    var title: String
+    var text: String
+    var date: String
 }
