@@ -100,7 +100,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Note" largeTitleDisplayMode="never" id="4Om-mD-mAe">
-                        <barButtonItem key="backBarButtonItem" id="SG1-rS-q1o"/>
+                        <barButtonItem key="backBarButtonItem" title="z" id="SG1-rS-q1o"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="y39-ib-L0u"/>
                     </navigationItem>
                     <connections>
                         <outlet property="noteTextView" destination="zxb-xL-wL3" id="O21-9B-Fgp"/>

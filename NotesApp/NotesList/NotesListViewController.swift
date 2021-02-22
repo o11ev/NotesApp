@@ -14,6 +14,7 @@ class NotesListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 60
+        tableView.reloadData()
     }
 
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
@@ -45,9 +46,8 @@ class NotesListViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             let noteVC = segue.destination as! NoteViewController
             noteVC.note = notes[indexPath.row]
+            noteVC.noteIndex = indexPath.row
         }
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     
 

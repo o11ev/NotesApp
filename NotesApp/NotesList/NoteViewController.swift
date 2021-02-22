@@ -10,6 +10,7 @@ import UIKit
 class NoteViewController: UIViewController {
 
     var note: Note!
+    var noteIndex: Int!
     
     @IBOutlet var titleTextFiled: UITextField!
     @IBOutlet var noteTextView: UITextView!
@@ -21,15 +22,21 @@ class NoteViewController: UIViewController {
         noteTextView.text = note.text
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        editNote()
     }
-    */
-
 }
+
+// MARK: - Edditing Note
+extension NoteViewController {
+    func editNote() {
+        guard let title = titleTextFiled.text else { return }
+        guard let text = noteTextView.text else { return }
+        
+        if !title.isEmpty && !text.isEmpty {
+            let note = Note(title: title, text: text)
+            DataManager.shared.notes[noteIndex] = note
+        }
+    }
+}
+
