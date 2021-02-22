@@ -25,6 +25,7 @@ class NoteViewController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         editNote()
     }
+
 }
 
 // MARK: - Edditing Note
@@ -32,7 +33,7 @@ extension NoteViewController {
     func editNote() {
         guard let title = titleTextFiled.text else { return }
         guard let text = noteTextView.text else { return }
-        
+
         if !title.isEmpty && !text.isEmpty {
             let note = Note(title: title, text: text)
             DataManager.shared.notes[noteIndex] = note

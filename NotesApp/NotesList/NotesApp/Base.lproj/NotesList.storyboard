@@ -101,7 +101,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Note" largeTitleDisplayMode="never" id="4Om-mD-mAe">
                         <barButtonItem key="backBarButtonItem" title="z" id="SG1-rS-q1o"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="y39-ib-L0u"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="y39-ib-L0u">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="RUl-LH-i1d" id="7Wh-pK-T3U"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="noteTextView" destination="zxb-xL-wL3" id="O21-9B-Fgp"/>

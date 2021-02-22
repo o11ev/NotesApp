@@ -14,7 +14,6 @@ class NotesListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 60
-        tableView.reloadData()
     }
 
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
