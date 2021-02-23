@@ -15,7 +15,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nP2-je-GsE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" systemColor="systemIndigoColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="note" id="qGE-Td-5aF">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -24,6 +25,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="RUl-LH-i1d" kind="show" id="bEd-ct-cNS"/>
                                 </connections>
@@ -36,6 +38,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes List" id="hVY-Zi-BTK">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1th-Qq-Qnb">
+                            <color key="tintColor" systemColor="systemIndigoColor"/>
                             <connections>
                                 <action selector="backButtonPressed:" destination="rvO-mZ-FVo" id="RdZ-i7-3vb"/>
                             </connections>
@@ -53,6 +56,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ebg-Vq-ffp">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemIndigoColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="rvO-mZ-FVo" kind="relationship" relationship="rootViewController" id="8vH-Ix-YnF"/>
@@ -73,7 +77,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0C-dl-vn3">
                                 <rect key="frame" x="187" y="104" width="40" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-J8-tqx">
@@ -85,7 +89,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxb-xL-wL3">
-                                <rect key="frame" x="16" y="216" width="382" height="664"/>
+                                <rect key="frame" x="16" y="216" width="382" height="630"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -94,22 +98,22 @@
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9o9-xl-DwV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="TT1-J8-tqx" firstAttribute="leading" secondItem="9o9-xl-DwV" secondAttribute="leading" constant="16" id="1Sb-oX-Ltj"/>
                             <constraint firstItem="N0C-dl-vn3" firstAttribute="top" secondItem="9o9-xl-DwV" secondAttribute="top" constant="16" id="7lh-TU-T3Q"/>
                             <constraint firstItem="N0C-dl-vn3" firstAttribute="centerX" secondItem="bn1-Aq-m4Z" secondAttribute="centerX" id="JHI-1W-Loe"/>
                             <constraint firstItem="9o9-xl-DwV" firstAttribute="trailing" secondItem="zxb-xL-wL3" secondAttribute="trailing" constant="16" id="SbT-yy-keX"/>
+                            <constraint firstItem="9o9-xl-DwV" firstAttribute="bottom" secondItem="zxb-xL-wL3" secondAttribute="bottom" constant="16" id="ZKu-db-aZW"/>
                             <constraint firstItem="zxb-xL-wL3" firstAttribute="top" secondItem="TT1-J8-tqx" secondAttribute="bottom" constant="16" id="goJ-RR-fHG"/>
                             <constraint firstItem="TT1-J8-tqx" firstAttribute="top" secondItem="N0C-dl-vn3" secondAttribute="bottom" constant="16" id="kEX-lB-GK0"/>
-                            <constraint firstAttribute="bottom" secondItem="zxb-xL-wL3" secondAttribute="bottom" constant="16" id="moR-uB-7Yv"/>
                             <constraint firstItem="9o9-xl-DwV" firstAttribute="trailing" secondItem="TT1-J8-tqx" secondAttribute="trailing" constant="16" id="o9X-MV-fbP"/>
                             <constraint firstItem="zxb-xL-wL3" firstAttribute="leading" secondItem="9o9-xl-DwV" secondAttribute="leading" constant="16" id="ygv-VK-edI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Note" largeTitleDisplayMode="never" id="4Om-mD-mAe">
-                        <barButtonItem key="backBarButtonItem" title="z" id="SG1-rS-q1o"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="y39-ib-L0u">
+                            <color key="tintColor" systemColor="systemIndigoColor"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="RUl-LH-i1d" id="7Wh-pK-T3U"/>
                             </connections>
@@ -133,8 +137,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
