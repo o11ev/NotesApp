@@ -22,7 +22,6 @@ class NotesListViewController: UITableViewController {
         dismiss(animated: true)
     }
     
-    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataManager.shared.notes.count
@@ -38,6 +37,11 @@ class NotesListViewController: UITableViewController {
         cell.contentConfiguration = content
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            DataManager.shared.notes.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
     }
     
     // MARK: - Navigation
