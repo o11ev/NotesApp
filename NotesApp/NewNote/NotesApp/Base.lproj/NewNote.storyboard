@@ -74,7 +74,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lwS-lD-z73"/>
                     <connections>
-                        <outlet property="currentDataLabel" destination="DlL-tR-poh" id="mCT-X6-MfP"/>
+                        <outlet property="currentDateLabel" destination="DlL-tR-poh" id="mCT-X6-MfP"/>
                         <outlet property="noteTextView" destination="w0d-ya-Xf4" id="4mB-VP-Wjp"/>
                         <outlet property="titleTextFiled" destination="eGh-44-tpf" id="CrE-pY-8z1"/>
                     </connections>

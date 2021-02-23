@@ -11,7 +11,7 @@ class NewNoteViewController: UIViewController {
     
     @IBOutlet var titleTextFiled: UITextField!
     @IBOutlet var noteTextView: UITextView!
-    @IBOutlet var currentDataLabel: UILabel!
+    @IBOutlet var currentDateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class NewNoteViewController: UIViewController {
     
     private func setDateToLabel() {
         let noteDate: String = addCurrentDateToNote()
-        currentDataLabel.text = noteDate
+        currentDateLabel.text = noteDate
     }
 }
 
