@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EoR-TX-K3E">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +12,11 @@
             <objects>
                 <viewController id="EoR-TX-K3E" customClass="NewNoteViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDv-JL-T0O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fs7-qa-iJS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="New Note" id="WDS-kL-S5O">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="COM-Df-ZQZ">
@@ -34,13 +33,13 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-tR-poh">
-                                <rect key="frame" x="187.5" y="60" width="39.5" height="19.5"/>
+                                <rect key="frame" x="280.5" y="60" width="39.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGh-44-tpf">
-                                <rect key="frame" x="16" y="95.5" width="382" height="60"/>
+                                <rect key="frame" x="16" y="95.5" width="568" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="v93-kY-aNp"/>
                                 </constraints>
@@ -48,7 +47,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0d-ya-Xf4">
-                                <rect key="frame" x="16" y="171.5" width="382" height="674.5"/>
+                                <rect key="frame" x="16" y="171.5" width="568" height="412.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -74,7 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lwS-lD-z73"/>
                     <connections>
-                        <outlet property="currentDataLabel" destination="DlL-tR-poh" id="mCT-X6-MfP"/>
+                        <outlet property="currentDateLabel" destination="DlL-tR-poh" id="mCT-X6-MfP"/>
                         <outlet property="noteTextView" destination="w0d-ya-Xf4" id="4mB-VP-Wjp"/>
                         <outlet property="titleTextFiled" destination="eGh-44-tpf" id="CrE-pY-8z1"/>
                     </connections>
